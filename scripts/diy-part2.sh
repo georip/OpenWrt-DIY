@@ -13,6 +13,12 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generate
 
+# Modify  修改机器名称
+sed -i 's/OpenWrt/GEOHOME/g' package/base-files/files/bin/config_generate
+
+# Modify wifi名称
+sed -i 's/OpenWrt/GEOHOME/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
